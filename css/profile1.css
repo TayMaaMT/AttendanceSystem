@@ -1,0 +1,273 @@
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+
+
+/*//////////////////[ RESTYLE TAG ]/////////////////////*/
+
+body,
+html {
+    height: 100%;
+    background: #2D3142;
+    font-family: Ubuntu-Regular, sans-serif;
+}
+
+h1,
+p {
+    color: #EF8354;
+}
+
+h3 {
+    color: white;
+}
+
+select {
+    margin: 10px 0 10px 10px;
+    width: 60%;
+}
+
+input {
+    margin: 10px 10px 10px 10px;
+}
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Make the image to responsive */
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    position: relative;
+    max-width: 300px;
+    margin: 0 0 0 0;
+    text-align: center;
+    border-right: solid #BFC0C0;
+    float: left;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0 150px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card2 {
+    display: inline-flex;
+    height: 100px;
+    width: 300px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .6em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 21px;
+}
+
+.card1 {
+    display: inline-flex;
+    height: 100px;
+    width: 300px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .6em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 21px;
+}
+
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+
+.overlay {
+    position: center;
+    height: 80%;
+    width: 80%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: gray;
+    border-radius: 100%;
+}
+
+
+/* When you mouse over the container, fade in the overlay icon*/
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+
+.icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* When you move the mouse over the icon, change color */
+
+.material-icons {
+    color: black;
+    font-size: 200px;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 200px;
+    border: 2px solid #BFC0C0;
+    margin: 5px 5px 2px 5px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 21px;
+    background-color: inherit;
+}
+
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.btn-style {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-style a {
+    position: relative;
+    transition: all .45s ease-Out;
+}
+
+.translate {
+    transform: rotate(50deg);
+    width: 100%;
+    height: 250%;
+    left: -200px;
+    top: -30px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .3s ease-Out;
+}
+
+.btn-style:hover .translate {
+    left: 0;
+}
+
+.btn-style:hover a {
+    color: #2D3142;
+}
+
+.card2:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+.modal0 {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content0 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: left;
+}
+
+.close-button0 {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button0:hover {
+    background-color: darkgray;
+}
+
+.show-modal0 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.select {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+@media screen and (min-width:1000px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    #container {
+        width: 60%;
+    }
+}

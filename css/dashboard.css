@@ -1,0 +1,405 @@
+
+
+
+/*///////////////////[ FONT ]///////////////////////////*/
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
+  }
+  
+  @font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+  }
+
+/*//////////////////[ RESTYLE TAG ]/////////////////////*/
+.login-form-title {
+  font-family: Ubuntu-Bold;
+  font-size: 28px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: block;
+}
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Ubuntu-Regular, sans-serif;
+  /*background: url("../img/iug.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+.container-login {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;  
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  width: 200px;
+}
+
+.container-login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.65); 
+}
+
+/* Heading */
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 70px 0 0 0;
+    color: #EF8354;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  h3{
+
+    margin-bottom: 15%;
+
+  }
+
+
+  /* Layout Styling */
+
+.container {
+    position: relative;
+    left:10%;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+  }
+
+   /* div Styling */
+
+  .test{
+    position: relative;
+    float: left;
+    margin: 80px 80px 30px 80px ;
+    background-color:white;
+    width: 20%;
+    border-radius: 10px;
+    
+}
+
+
+ button{
+  height: 40px;
+  width: 200px;
+  border-color: white;
+  border: 2px solid #2D3142;
+  border-radius: 21px;
+  color: black;
+  margin: 10px auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  
+
+ }
+
+
+   /* button Styling */
+
+.trigger{
+    height: 40px;
+    width: 150px;
+    border-color: white;
+    border: 2px solid #2D3142;
+    margin: 10px 10px 10px 10px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    position: relative;
+    left: 15px;
+    
+  
+}
+
+  /* font type in button Styling */
+
+a {
+    color: #2D3142;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+
+/*///////////////////////////////////_Add Strudent_////////////////////////////////*/
+
+
+  .trigger {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .trigger a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  .translate {
+    transform: rotate(50deg);
+    width: 100%;
+    height: 250%;
+    left: -200px;
+    top: -30px;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .3s ease-Out;
+  }
+  
+  .trigger:hover .translate {
+    left: 0;
+  }
+  
+  .trigger:hover a {
+    color: #2D3142;
+  }
+
+.imgs{
+    /* position: center;
+    left: 0;
+    top: 0; */
+    width: 20%;
+    height: 20%;
+    position: relative;
+    margin: 5px;
+}
+.select{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.modal {
+    position: fixed;
+    z-index:999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;   
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+/*///////////////////////////////////_Add Doctor_////////////////////////////////*/
+
+.modal1 {
+    position: fixed;
+    z-index:999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    
+}
+.modal-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.close-button1 {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button1:hover {
+    background-color: darkgray;
+}
+.show-modal1 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+
+
+/*///////////////////////////////////_Add Classroom_////////////////////////////////*/
+
+.modal2 {
+    position: fixed;
+    z-index:999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.close-button2 {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button2:hover {
+    background-color: darkgray;
+}
+.show-modal2 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/*///////////////////////////////////_Add Course_////////////////////////////////*/
+
+.modal3 {
+    position: fixed;
+    z-index:999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.close-button3 {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button3:hover {
+    background-color: darkgray;
+}
+.show-modal3 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+
+ 
